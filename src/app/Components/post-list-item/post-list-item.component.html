@@ -1,0 +1,25 @@
+<div [ngClass]="{'list-group-item': true,
+'list-group-item-success': isPos,
+'list-group-item-danger': isNeg}">
+  <div class="container">
+    <div>
+      <div class="col-md-8">
+        <h2 >{{ PostTitle }}</h2>
+      </div>
+      <div class="col-md-4">
+      <h3> {{ PostDate | date  }} </h3>
+    </div>
+    </div>
+  <div class="col-md-12">
+    <p>{{ PostContent }}</p>
+  </div>
+  <div>
+    <div class="col-md-1">
+      <input type="button"  value="Love it!" class="btn btn-success" (click)="onAdd()" />
+    </div>
+    <div class="col-md-1">
+      <input type="button"  value="Not Love it!" class="btn btn-danger" (click)="onReduce()"  />
+    </div>
+
+  </div>
+</div>

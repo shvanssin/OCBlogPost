@@ -1,0 +1,16 @@
+<!-- <div *ngFor="let item of PostList">
+  <div>
+    <h2>{{ item.title }}</h2>
+    <h3> {{ item.created_at | date }}</h3>
+  </div>
+  <p>{{ item.content }}</p>
+
+</div> -->
+
+
+
+<div class="container" *ngFor="let post of PostList">
+  <app-post-list-item [post]="post"></app-post-list-item>
+</div >
+
+
